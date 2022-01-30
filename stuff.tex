@@ -4,6 +4,7 @@
 \thispagestyle{empty}
 \usepackage{import}
 \usepackage{amsmath}
+\usepackage{multirow}
 \usepackage{graphicx}
 \usepackage{flexisym}
 \usepackage{calligra}
@@ -12,17 +13,30 @@
 \usepackage[english]{babel}
 \usepackage[utf8x]{inputenc}
 \usepackage{float}
-\usepackage[colorinlistoftodos]{todonotes}
-
+\renewcommand{\arraystretch}{3.0}
 
 \DeclareMathAlphabet{\mathcalligra}{T1}{calligra}{m}{n}
 \DeclareFontShape{T1}{calligra}{m}{n}{<->s*[2.2]callig15}{}
 \newcommand{\scriptr}{\mathcalligra{r}\,}
 \newcommand{\boldscriptr}{\pmb{\mathcalligra{r}}\,}
 
-\definecolor{hwColor}{HTML}{AD53BA}
 
 \begin{document}
-  % Start here
-  Behnam
+
+  \begin{tabular}{ |p{5cm}|p{6cm}|p{4cm}| }
+    \hline
+      \multicolumn{3}{|c|}{ \textbf{Maxwell's equations}} \\
+    \hline
+       &  & \textbf{In Vacuum} \\
+    \hline
+      $\overrightarrow{\nabla}.\overrightarrow{E}=\dfrac{\rho}{\epsilon_0}$ & Gauss law & $\overrightarrow{\nabla}.\overrightarrow{E}=0$ \\
+    \hline
+      $\overrightarrow{\nabla}.\overrightarrow{B}=0$ & Gauss law for magnetism & $\overrightarrow{\nabla}.\overrightarrow{B}=0$ \\
+    \hline
+      $\overrightarrow{\nabla} \times \overrightarrow{E}=-\dfrac{\partial \overrightarrow{B}}{\partial t}$ & Faraday's law & $\overrightarrow{\nabla} \times \overrightarrow{E}=-\dfrac{\partial \overrightarrow{B}}{\partial t}$ \\
+    \hline
+      $\overrightarrow{\nabla} \times \overrightarrow{B}=\mu_0 \left(\overrightarrow{J}+\epsilon_0 \dfrac{\partial \overrightarrow{E}}{\partial t}\right)$ & Ampère's law with Maxwell's correction & $\overrightarrow{\nabla} \times \overrightarrow{B}=\mu_0 \epsilon_0 \dfrac{\partial \overrightarrow{E}}{\partial t}$ \\
+    \hline
+  \end{tabular}
+
 \end{document}
